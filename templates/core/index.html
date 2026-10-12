@@ -1,0 +1,23 @@
+
+{% extends 'core/base.html' %}
+
+{% block title %}Home | PTS Online Library{% endblock %}
+
+{% block content %}
+
+<section class="card">
+    <h1>Welcome to PTS Online Library</h1>
+
+    <p>
+        Discover a world of knowledge through books, literature,
+        science, and the arts.
+    </p>
+
+    <br>
+
+    <a href="{% url 'contact' %}" class="button">
+        Contact Us
+    </a>
+</section>
+
+{% endblock %}
