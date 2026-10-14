@@ -1,23 +1,57 @@
-
 {% extends 'core/base.html' %}
+{% load static %}
 
 {% block title %}Home | PTS Online Library{% endblock %}
 
 {% block content %}
 
-<section class="card">
-    <h1>Welcome to PTS Online Library</h1>
+<!-- Main introduction -->
+<section class="hero">
+    <div class="hero-text">
+        <p class="eyebrow">WELCOME TO PTS ONLINE LIBRARY</p>
+        <h1>Discover a World of Knowledge</h1>
 
-    <p>
-        Discover a world of knowledge through books, literature,
-        science, and the arts.
-    </p>
+        <p>
+            Explore books, discover new ideas and enjoy
+            the journey of learning.
+        </p>
 
-    <br>
+        <a href="{% url 'core:about' %}" class="btn">Learn More</a>
+    </div>
 
-    <a href="{% url 'contact' %}" class="button">
-        Contact Us
-    </a>
+    <div class="hero-image">
+        <img src="{% static 'images/library.jpg' %}"
+             alt="Library interior">
+    </div>
+</section>
+
+<!-- Display the available book categories -->
+<section class="section">
+    <p class="eyebrow">EXPLORE</p>
+    <h2>Discover Your Interests</h2>
+
+    <div class="book-grid">
+        <article class="book-card">
+            <img src="{% static 'images/literature.jpg' %}"
+                 alt="Literature books">
+            <h3>Literature</h3>
+            <p>Discover stories and great writers.</p>
+        </article>
+
+        <article class="book-card">
+            <img src="{% static 'images/science.jpg' %}"
+                 alt="Science books">
+            <h3>Science</h3>
+            <p>Explore ideas about the world around us.</p>
+        </article>
+
+        <article class="book-card">
+            <img src="{% static 'images/art.jpg' %}"
+                 alt="Art books">
+            <h3>Art</h3>
+            <p>Explore creativity and imagination.</p>
+        </article>
+    </div>
 </section>
 
 {% endblock %}

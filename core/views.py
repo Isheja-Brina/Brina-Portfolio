@@ -1,23 +1,29 @@
-from django.shortcuts import render, redirect
-from django.contrib import messages
-from .forms import ContactForm
+from django.shortcuts import render
 
 
 def index(request):
-    return render(request, "core/index.html")
+    # Display the home page
+    return render(request, 'core/index.html')
+
+
+def about(request):
+    # Display information about the library and its creator.
+    return render(request, 'core/about.html')
 
 
 def contact(request):
-    if request.method == "POST":
-        form = ContactForm(request.POST)
+    # Display the contact form and handle its submission.
+    success = False
 
-        if form.is_valid():
-            messages.success(
-                request,
-                "Thank you! Your message has been received."
-            )
-            return redirect("contact")
-    else:
-        form = ContactForm()
+    if request.method == 'POST':
+        name = request.POST.get('name', '').strip()
+        email = request.POST.get('email', '').strip()
+        message = request.POST.get('message', '').strip()
 
-    return render(request, "core/contact.html", {"form": form})
+        # Check that all required fields contain text.
+        if name and email and message:
+            success = True
+
+    return render(request, 'core/contact.html', {
+        'success': success
+    })

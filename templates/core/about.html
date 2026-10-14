@@ -1,0 +1,36 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}About | PTS Online Library{% endblock %}
+
+{% block content %}
+
+<section class="about-section">
+    <div class="about-image">
+        <img src="{% static 'images/Brina.jpeg' %}"
+             alt="Portrait of the website creator">
+    </div>
+
+    <div class="about-text">
+        <p class="eyebrow">ABOUT US</p>
+        <h1>A Place for Curious Minds</h1>
+
+        <p>
+            PTS Online Library is a project designed to
+            encourage reading and make learning enjoyable.
+        </p>
+
+        <h2>About the Creator</h2>
+
+        <p>
+            My name is Brina. I created this website as part
+            of my learning journey in web development.
+            Through this project, I am learning to use
+            Python and Django to build websites.
+        </p>
+
+        <a href="{% url 'core:contact' %}" class="btn">Contact Us</a>
+    </div>
+</section>
+
+{% endblock %}

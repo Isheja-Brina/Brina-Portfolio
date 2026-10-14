@@ -1,77 +1,39 @@
-
 {% extends 'core/base.html' %}
 
-{% block title %}Contact Us | PTS Online Library{% endblock %}
+{% block title %}Contact | PTS Online Library{% endblock %}
 
 {% block content %}
 
-<section class="card">
-    <h1>Contact Us</h1>
+<section class="contact-section">
+    <div class="contact-intro">
+        <p class="eyebrow">GET IN TOUCH</p>
+        <h1>We Would Love to Hear From You</h1>
+        <p>Have a question or suggestion? Send us a message.</p>
+    </div>
 
-    <p>
-        Have a question or suggestion? We would love to hear from you.
-        Fill in the form below to get in touch.
-    </p>
+    <div class="contact-card">
+        {% if success %}
+            <p class="success-message">
+                Thank you! Your form has been received.
+            </p>
+        {% endif %}
 
-    <form method="post">
-        {% csrf_token %}
+        <form method="POST" action="{% url 'core:contact' %}">
+            {% csrf_token %}
 
-        <div style="margin-bottom: 18px;">
-            <label for="name">Full Name</label><br>
-            <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Enter your full name"
-                required
-                style="width: 100%; padding: 12px; margin-top: 6px;"
-            >
-        </div>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
 
-        <div style="margin-bottom: 18px;">
-            <label for="email">Email Address</label><br>
-            <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Enter your email"
-                required
-                style="width: 100%; padding: 12px; margin-top: 6px;"
-            >
-        </div>
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
 
-        <div style="margin-bottom: 18px;">
-            <label for="subject">Subject</label><br>
-            <select
-                id="subject"
-                name="subject"
-                required
-                style="width: 100%; padding: 12px; margin-top: 6px;"
-            >
-                <option value="">Choose a subject</option>
-                <option value="book">Book Recommendation</option>
-                <option value="feedback">Website Feedback</option>
-                <option value="help">Technical Support</option>
-                <option value="other">Other</option>
-            </select>
-        </div>
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message"
+                      rows="5" required></textarea>
 
-        <div style="margin-bottom: 18px;">
-            <label for="message">Your Message</label><br>
-            <textarea
-                id="message"
-                name="message"
-                rows="5"
-                placeholder="Write your message here..."
-                required
-                style="width: 100%; padding: 12px; margin-top: 6px;"
-            ></textarea>
-        </div>
-
-        <button type="submit" class="button">
-            Send Message
-        </button>
-    </form>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </div>
 </section>
 
 {% endblock %}
