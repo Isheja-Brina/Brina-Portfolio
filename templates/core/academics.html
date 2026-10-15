@@ -1,0 +1,75 @@
+
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Academics | Brina{% endblock %}
+
+{% block content %}
+<section class="page-heading">
+    <p class="eyebrow">EDUCATION · CURIOSITY · GROWTH</p>
+    <h1>Academic Journey</h1>
+    <p>
+        The learning experiences that have shaped my interests
+        and future ambitions.
+    </p>
+</section>
+
+<section class="timeline-section">
+    <div class="timeline">
+        <article class="timeline-item">
+            <p class="timeline-date">2012–2015</p>
+            <h2>Les Pigeons</h2>
+            <p>My nursery education.</p>
+        </article>
+
+        <article class="timeline-item">
+            <p class="timeline-date">Primary and Secondary</p>
+            <h2>Path to Success International School</h2>
+            <p>
+                Continued my education while exploring leadership,
+                academic subjects and extracurricular opportunities.
+            </p>
+        </article>
+    </div>
+</section>
+
+<section class="project-feature">
+    <img src="{% static 'images/GHAMUN.jpeg' %}"
+         alt="Model United Nations participation">
+    <div class="project-copy">
+        <p class="eyebrow">GLOBAL PERSPECTIVES</p>
+        <h2>Model United Nations</h2>
+        <p>
+            Participating in MUN gave me an opportunity to engage with
+            international issues and explore different perspectives.
+            It connects with my interest in diplomacy and international
+            relations.
+        </p>
+    </div>
+</section>
+
+<section class="project-feature project-feature-reverse">
+    <img src="{% static 'images/podcast.jpeg' %}"
+         alt="Path to Success Diaries podcast">
+    <div class="project-copy">
+        <p class="eyebrow">SCHOOL COMMUNITY</p>
+        <h2>Path to Success Diaries</h2>
+        <p>
+            I host Path to Success Diaries, a school podcast that
+            provides a space to share stories, experiences and voices
+            from the school community.
+        </p>
+    </div>
+</section>
+
+<section class="home-note">
+    <p class="eyebrow">MY FUTURE DIRECTION</p>
+    <h2>International Relations and AI Governance</h2>
+    <p>
+        I hope to pursue a BA in International Relations and later
+        a Master's focused on AI policy or governance. I am interested
+        in how international cooperation and public policy can help
+        guide the responsible development of artificial intelligence.
+    </p>
+</section>
+{% endblock %}

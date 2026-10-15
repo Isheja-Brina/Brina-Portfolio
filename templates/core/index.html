@@ -1,57 +1,109 @@
+
 {% extends 'core/base.html' %}
 {% load static %}
 
-{% block title %}Home | PTS Online Library{% endblock %}
+{% block title %}Home | Brina{% endblock %}
 
 {% block content %}
-
-<!-- Main introduction -->
 <section class="hero">
     <div class="hero-text">
-        <p class="eyebrow">WELCOME TO PTS ONLINE LIBRARY</p>
-        <h1>Discover a World of Knowledge</h1>
+        <p class="eyebrow">WELCOME TO MY PORTFOLIO</p>
+        <h1>Hello, I'm <span>Brina.</span></h1>
+
+        <h2 class="hero-subtitle">
+            Student Leader · Creative Thinker · Future AI Policy Professional
+        </h2>
 
         <p>
-            Explore books, discover new ideas and enjoy
-            the journey of learning.
+            I am Karenzi Isheja Brina, an ambitious student passionate about
+            leadership, creativity and learning from different perspectives.
+            I enjoy exploring new ideas, developing my skills and finding
+            meaningful ways to contribute to the people around me.
         </p>
 
-        <a href="{% url 'core:about' %}" class="btn">Learn More</a>
+        <p>
+            This portfolio shares my journey, the responsibilities I have
+            taken on, the projects I have explored and the interests that
+            continue to shape who I am.
+        </p>
+
+        <a href="{% url 'core:about' %}" class="btn">Get to know me</a>
     </div>
 
     <div class="hero-image">
-        <img src="{% static 'images/library.jpg' %}"
-             alt="Library interior">
+        <img src="{% static 'images/brina potrait.jpeg' %}"
+             alt="Portrait of Brina">
     </div>
 </section>
 
-<!-- Display the available book categories -->
-<section class="section">
-    <p class="eyebrow">EXPLORE</p>
-    <h2>Discover Your Interests</h2>
+<section class="portfolio-section">
+    <div class="section-heading">
+        <p class="eyebrow">EXPLORE MY JOURNEY</p>
+        <h2>Different sides of me</h2>
+        <p>Discover what I do, what I create and what inspires me.</p>
+    </div>
 
-    <div class="book-grid">
-        <article class="book-card">
-            <img src="{% static 'images/literature.jpg' %}"
-                 alt="Literature books">
-            <h3>Literature</h3>
-            <p>Discover stories and great writers.</p>
+    <div class="portfolio-grid">
+        <article class="portfolio-card">
+            <img src="{% static 'images/protocol team.jpeg' %}"
+                 alt="Brina with the protocol team">
+            <div class="portfolio-card-content">
+                <p class="card-number">01 / LEADERSHIP</p>
+                <h3>Leadership</h3>
+                <p>
+                    My journey through student leadership, service,
+                    responsibility and teamwork.
+                </p>
+                <a href="{% url 'core:leadership' %}" class="card-link">
+                    Explore leadership →
+                </a>
+            </div>
         </article>
 
-        <article class="book-card">
-            <img src="{% static 'images/science.jpg' %}"
-                 alt="Science books">
-            <h3>Science</h3>
-            <p>Explore ideas about the world around us.</p>
+        <article class="portfolio-card">
+            <img src="{% static 'images/comp project.jpeg' %}"
+                 alt="Computer Science project">
+            <div class="portfolio-card-content">
+                <p class="card-number">02 / CREATIVITY</p>
+                <h3>Creative Projects</h3>
+                <p>
+                    School projects and creative work that allow me
+                    to turn ideas into something practical.
+                </p>
+                <a href="{% url 'core:projects' %}" class="card-link">
+                    View my projects →
+                </a>
+            </div>
         </article>
 
-        <article class="book-card">
-            <img src="{% static 'images/art.jpg' %}"
-                 alt="Art books">
-            <h3>Art</h3>
-            <p>Explore creativity and imagination.</p>
+        <article class="portfolio-card">
+            <img src="{% static 'images/Adventure.jpeg' %}"
+                 alt="A moment from Brina's adventures">
+            <div class="portfolio-card-content">
+                <p class="card-number">03 / PERSONAL INTERESTS</p>
+                <h3>Interests</h3>
+                <p>
+                    Photography, reading, editing, travel and the
+                    little things that inspire my creativity.
+                </p>
+                <a href="{% url 'core:gallery' %}" class="card-link">
+                    Discover my interests →
+                </a>
+            </div>
         </article>
     </div>
 </section>
 
+<section class="home-note">
+    <p class="eyebrow">LOOKING AHEAD</p>
+    <h2>Curious about the future</h2>
+    <p>
+        I hope to study International Relations and later explore AI
+        policy and governance, bringing together technology, people
+        and responsible decision-making.
+    </p>
+    <a href="{% url 'core:academics' %}" class="text-link">
+        Explore my academic journey →
+    </a>
+</section>
 {% endblock %}

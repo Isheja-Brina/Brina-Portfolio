@@ -1,0 +1,42 @@
+
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Creative Projects | Brina{% endblock %}
+
+{% block content %}
+<section class="page-heading">
+    <p class="eyebrow">IDEAS INTO ACTION</p>
+    <h1>Creative Projects</h1>
+    <p>
+        A space for school projects, practical learning and creative work.
+    </p>
+</section>
+
+<section class="project-feature">
+    <img src="{% static 'images/comp project.jpeg' %}"
+         alt="Computer Science project">
+    <div class="project-copy">
+        <p class="eyebrow">COMPUTER SCIENCE</p>
+        <h2>Learning through technology</h2>
+        <p>
+            Through Computer Science, I explore how ideas can be developed
+            into practical solutions. Working on projects helps me
+            practise logical thinking, problem-solving and programming.
+        </p>
+        <p>
+            I am interested in how technology can be used responsibly
+            and how it connects with the wider world.
+        </p>
+    </div>
+</section>
+
+<section class="home-note">
+    <p class="eyebrow">ALWAYS LEARNING</p>
+    <h2>More projects to come</h2>
+    <p>
+        This portfolio will grow as I develop new projects, learn new
+        skills and document more of my work.
+    </p>
+</section>
+{% endblock %}

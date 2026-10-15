@@ -1,0 +1,91 @@
+
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Interests | Brina{% endblock %}
+
+{% block content %}
+<section class="page-heading">
+    <p class="eyebrow">OUTSIDE THE CLASSROOM</p>
+    <h1>My Interests</h1>
+    <p>
+        The activities that allow me to explore, express myself
+        and see the world from different angles.
+    </p>
+</section>
+
+<section class="gallery-section">
+    <div class="gallery-grid">
+        <article class="gallery-card">
+            <img src="{% static 'images/Adventure.jpeg' %}"
+                 alt="Travel and adventure">
+            <div class="card-body">
+                <h2>Travel and Adventure</h2>
+                <p>
+                    Discovering places, experiences and perspectives
+                    beyond what I already know.
+                </p>
+            </div>
+        </article>
+
+        <article class="gallery-card">
+            <img src="{% static 'images/BOOK.jpeg' %}"
+                 alt="Books and reading">
+            <div class="card-body">
+                <h2>Reading</h2>
+                <p>
+                    Exploring ideas, stories and different ways
+                    of understanding the world.
+                </p>
+            </div>
+        </article>
+
+        <article class="gallery-card">
+            <img src="{% static 'images/dancing.jpeg' %}"
+                 alt="Dancing">
+            <div class="card-body">
+                <h2>Dancing</h2>
+                <p>
+                    Enjoying movement, music and creative expression.
+                </p>
+            </div>
+        </article>
+
+        <article class="gallery-card">
+            <img src="{% static 'images/Friends.jpeg' %}"
+                 alt="Time spent with friends">
+            <div class="card-body">
+                <h2>Time with Friends</h2>
+                <p>
+                    Appreciating the people and shared memories
+                    that make everyday experiences special.
+                </p>
+            </div>
+        </article>
+
+        <article class="gallery-card">
+            <img src="{% static 'images/Puzzles.jpeg' %}"
+                 alt="Puzzles">
+            <div class="card-body">
+                <h2>Puzzles</h2>
+                <p>
+                    Enjoying challenges that encourage patience
+                    and problem-solving.
+                </p>
+            </div>
+        </article>
+
+        <article class="gallery-card">
+            <img src="{% static 'images/podcast.jpeg' %}"
+                 alt="Creative editing and media">
+            <div class="card-body">
+                <h2>Photography and Editing</h2>
+                <p>
+                    Capturing moments and experimenting with
+                    photographs and video edits.
+                </p>
+            </div>
+        </article>
+    </div>
+</section>
+{% endblock %}

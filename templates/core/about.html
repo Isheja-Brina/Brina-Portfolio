@@ -1,36 +1,69 @@
+
 {% extends 'core/base.html' %}
 {% load static %}
 
-{% block title %}About | PTS Online Library{% endblock %}
+{% block title %}About Me | Brina{% endblock %}
 
 {% block content %}
+<section class="page-heading">
+    <p class="eyebrow">BEHIND THE PORTFOLIO</p>
+    <h1>About Me</h1>
+    <p>A little about who I am, what I value and where I hope to go.</p>
+</section>
 
-<section class="about-section">
-    <div class="about-image">
-        <img src="{% static 'images/Brina.jpeg' %}"
-             alt="Portrait of the website creator">
-    </div>
-
-    <div class="about-text">
-        <p class="eyebrow">ABOUT US</p>
-        <h1>A Place for Curious Minds</h1>
-
+<section class="content-section">
+    <div class="about-copy">
+        <h2>Who I am</h2>
         <p>
-            PTS Online Library is a project designed to
-            encourage reading and make learning enjoyable.
+            My name is Karenzi Isheja Brina. I am an ambitious student
+            with a strong interest in leadership, creativity and
+            understanding different perspectives.
+        </p>
+        <p>
+            I value opportunities that challenge me to think differently,
+            work with others and become more confident in my abilities.
+            Whether through school responsibilities, creative projects
+            or personal interests, I enjoy learning through experience.
+        </p>
+        <p>
+            I am especially interested in the relationship between
+            technology, society and international affairs. In the future,
+            I hope to explore how artificial intelligence can be governed
+            responsibly and fairly.
         </p>
 
-        <h2>About the Creator</h2>
-
+        <h2>What matters to me</h2>
         <p>
-            My name is Brina. I created this website as part
-            of my learning journey in web development.
-            Through this project, I am learning to use
-            Python and Django to build websites.
+            Growth, curiosity, responsibility and remaining open to ideas
+            beyond my own are important parts of the person I want to become.
         </p>
-
-        <a href="{% url 'core:contact' %}" class="btn">Contact Us</a>
     </div>
 </section>
 
+<section class="memory-section">
+    <div class="section-heading">
+        <p class="eyebrow">A LOOK BACK</p>
+        <h2>Little moments, part of my story</h2>
+    </div>
+
+    <div class="memory-grid">
+        <article class="memory-card">
+            <img src="{% static 'images/Baby picture.jpeg' %}"
+                 alt="Brina as a baby">
+            <div class="card-body">
+                <h3>The beginning</h3>
+                <p>A little glimpse of where my story began.</p>
+            </div>
+        </article>
+
+        <article class="memory-card">
+            <img src="{% static 'images/Toddler.jpeg' %}"
+                 alt="Brina as a toddler">
+            <div class="card-body">
+                <h3>Growing up</h3>
+                <p>Every stage brings new experiences and lessons.</p>
+            </div>
+        </article>
+    </div>
+</section>
 {% endblock %}

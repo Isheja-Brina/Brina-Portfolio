@@ -1,3 +1,4 @@
+
 /.venv/
 /library_project/.gitignore.py
 .venv/
@@ -7,3 +8,4 @@ __pycache__/
 db.sqlite3
 .env
 .idea/
+staticfiles/

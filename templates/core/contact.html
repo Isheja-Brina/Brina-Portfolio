@@ -1,39 +1,54 @@
+
 {% extends 'core/base.html' %}
 
-{% block title %}Contact | PTS Online Library{% endblock %}
+{% block title %}Contact | Brina{% endblock %}
 
 {% block content %}
-
-<section class="contact-section">
-    <div class="contact-intro">
-        <p class="eyebrow">GET IN TOUCH</p>
-        <h1>We Would Love to Hear From You</h1>
-        <p>Have a question or suggestion? Send us a message.</p>
-    </div>
-
-    <div class="contact-card">
-        {% if success %}
-            <p class="success-message">
-                Thank you! Your form has been received.
-            </p>
-        {% endif %}
-
-        <form method="POST" action="{% url 'core:contact' %}">
-            {% csrf_token %}
-
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Your Message</label>
-            <textarea id="message" name="message"
-                      rows="5" required></textarea>
-
-            <button type="submit" class="btn">Send Message</button>
-        </form>
-    </div>
+<section class="page-heading">
+    <p class="eyebrow">LET'S CONNECT</p>
+    <h1>Contact Me</h1>
+    <p>
+        For conversations, collaboration and opportunities to connect.
+    </p>
 </section>
 
+<section class="contact-section">
+    <div class="contact-card">
+        <div class="contact-item">
+            <p class="contact-label">EMAIL</p>
+            <a href="mailto:isheja.kb@gmail.com">
+                isheja.kb@gmail.com
+            </a>
+        </div>
+
+        <div class="contact-item">
+            <p class="contact-label">PHONE</p>
+            <a href="tel:+250792560020">+250 792 560 020</a>
+        </div>
+
+        <div class="contact-item">
+            <p class="contact-label">LINKEDIN</p>
+            <a href="https://www.linkedin.com/in/karenzi-isheja-brina-01337a3b6"
+               target="_blank" rel="noopener noreferrer">
+                Visit my LinkedIn profile →
+            </a>
+        </div>
+
+        <div class="contact-item">
+            <p class="contact-label">INSTAGRAM</p>
+            <a href="https://www.instagram.com/_isheja.krz_/"
+               target="_blank" rel="noopener noreferrer">
+                Follow on Instagram →
+            </a>
+        </div>
+
+        <div class="contact-item">
+            <p class="contact-label">VSCO</p>
+            <a href="https://vsco.co/-isheja-krz-"
+               target="_blank" rel="noopener noreferrer">
+                View my VSCO →
+            </a>
+        </div>
+    </div>
+</section>
 {% endblock %}

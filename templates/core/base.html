@@ -1,22 +1,19 @@
-{% load static %}
 
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>{% block title %}PTS Online Library{% endblock %}</title>
-
+    <meta name="description" content="The personal portfolio of Karenzi Isheja Brina, featuring leadership, academics, projects and creative interests.">
+    <title>{% block title %}Brina | Portfolio{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
-
 <body>
     {% include 'core/nav-bar.html' %}
 
     <main>
-        {% block content %}
-        {% endblock %}
+        {% block content %}{% endblock %}
     </main>
 
     {% include 'core/footer.html' %}

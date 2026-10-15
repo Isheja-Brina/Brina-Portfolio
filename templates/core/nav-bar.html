@@ -1,11 +1,14 @@
+
 <nav class="navbar">
-    <a href="{% url 'core:index' %}" class="logo">
-        PTS <span>Online Library</span>
+    <a class="brand" href="{% url 'core:index' %}">
+        <span class="brand-name">Karenzi Isheja Brina</span>
+        <span class="brand-accent"></span>
     </a>
 
     <div class="nav-links">
         <a href="{% url 'core:index' %}">Home</a>
-        <a href="{% url 'core:about' %}">About</a>
+        <a href="{% url 'core:about' %}">About Me</a>
+        <a href="{% url 'core:academics' %}">Academics</a>
         <a href="{% url 'core:contact' %}">Contact</a>
     </div>
 </nav>
