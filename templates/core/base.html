@@ -5,10 +5,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta name="description" content="The personal portfolio of Karenzi Isheja Brina, featuring leadership, academics, projects and creative interests.">
+
     <title>{% block title %}Brina | Portfolio{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}?v=2">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Browser tab icon -->
+    <link rel="icon" type="image/svg+xml" href="{% static 'favicon.svg' %}">
 </head>
+
 <body>
     {% include 'core/nav-bar.html' %}
 

@@ -1,14 +1,29 @@
 
-<nav class="navbar">
+<nav class="navbar sticky-navbar">
     <a class="brand" href="{% url 'core:index' %}">
         <span class="brand-name">Karenzi Isheja Brina</span>
         <span class="brand-accent"></span>
     </a>
 
     <div class="nav-links">
-        <a href="{% url 'core:index' %}">Home</a>
-        <a href="{% url 'core:about' %}">About Me</a>
-        <a href="{% url 'core:academics' %}">Academics</a>
-        <a href="{% url 'core:contact' %}">Contact</a>
+        <a href="{% url 'core:index' %}">
+            <i class="bi bi-house-door" aria-hidden="true"></i>
+            <span>Home</span>
+        </a>
+
+        <a href="{% url 'core:about' %}">
+            <i class="bi bi-person" aria-hidden="true"></i>
+            <span>About Me</span>
+        </a>
+
+        <a href="{% url 'core:academics' %}">
+            <i class="bi bi-mortarboard" aria-hidden="true"></i>
+            <span>Academics</span>
+        </a>
+
+        <a href="{% url 'core:contact' %}">
+            <i class="bi bi-envelope" aria-hidden="true"></i>
+            <span>Contact</span>
+        </a>
     </div>
 </nav>
